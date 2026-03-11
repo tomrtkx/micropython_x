@@ -54,17 +54,6 @@ class listener_socket:
     def close(self):
         self.sck.close()
 
-    def _example_receive_workflow(self):
-        print("Waiting for request...")
-        req = self.receive()
-        print("Received request")
-        # 
-        # Do something
-        #
-        self.send_response(req['connection'], response_data = "TEST_RESPONSE")
-        print("Connection closed")
-        return req
-
 # --------------------------------------------------------------------------------------------------------------------------
 
 if __name__ == "__main__":
@@ -78,3 +67,4 @@ if __name__ == "__main__":
     SCK.close()
 
     print("Socket closed")
+
